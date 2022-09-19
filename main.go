@@ -15,7 +15,7 @@ func main() {
 	fmt.Printf("Pemain %v Kalah ~", <-channel)
 }
 
-func bolaPanas(player int, channel chan int) {
+func process(player int, channel chan int) {
 	for {
 		time.Sleep(1 * time.Second)
 		a := rand.NewSource(time.Now().UnixNano())
