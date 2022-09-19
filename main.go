@@ -10,7 +10,7 @@ func main() {
 	channel := make(chan int)
 	for i := 1; i <= 10; i++ {
 		fmt.Printf("Pemain %v Memulai Permainan\n", i)
-		go bolaPanas(i, channel)
+		go process(i, channel)
 	}
 	fmt.Printf("Pemain %v Kalah ~", <-channel)
 }
